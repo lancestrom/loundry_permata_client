@@ -1,28 +1,72 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="LOUNDRY PERMATA AMANDA YULIA PERNATASARI">
-    <meta name="author" content="RAHMADIKA SURYA SETIAWAN">
-
-    <title>Permata Loundry</title>
-    <link rel="icon" href="<?= base_url() ?>assets/gambar/logo.png">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-</head>
-
-<body>
-    <h1>Hello, world!</h1>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h5>
+                        <h5 class="text-center">
+                            <img src="<?= base_url() ?>assets/gambar/logo.png" alt="logo" style="height: 300px;weight: 300px;">
+                        </h5>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="text-center">
+                        <img src="<?= base_url() ?>assets/gambar/pegawai.png" alt="pegawai" style="height: 200px;weight:300px"><br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md mt-2">
+                                    <button type="button" class="btn btn-primary text-uppercase font-weight-bolder" data-toggle="modal" data-target="#pegawai">
+                                        Tambah Transaksi
+                                    </button>
+                                </div>
+                                <div class="col-md mt-2">
+                                    <button type="button" class="btn btn-success text-uppercase font-weight-bolder" data-toggle="modal" data-target="#pegawai2">
+                                        Detail Transaksi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="pegawai" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Trnsaksi</h5>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="pegawai2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Detail Trnsaksi</h5>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

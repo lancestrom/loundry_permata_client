@@ -45,11 +45,78 @@
                 <h5 class="modal-title" id="exampleModalLabel">Tambah Trnsaksi</h5>
             </div>
             <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <form>
+                    <div class="form-group">
+                        <label class="text-uppercase">Nama Customer</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <hr style="border: 1px solid black;">
+                    <h5 class="text-center">
+                        <label class="text-uppercase">Jenis Order</label>
+                    </h5>
+                    <div class="container">
+                        <h5 class="text-center">
+                            <div class="row">
+                                <div class="col-md">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status_order" value="cuci_setrika" required>
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            <h6 class="text-uppercase font-weight-bolder">Cuci setrika</h6>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class=" form-check">
+                                        <input class="form-check-input" type="radio" name="status_order" value="cuci_lipat" required>
+                                        <label class="form-check-label" for="exampleRadios3">
+                                            <h6 class="text-uppercase font-weight-bolder">Cuci lipat</h6>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class=" form-check">
+                                        <input class="form-check-input" type="radio" name="status_order" value="cuci_kering" required>
+                                        <label class="form-check-label" for="exampleRadios3">
+                                            <h6 class="text-uppercase font-weight-bolder">Cuci kering</h6>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status_order" value="cuci_badcover" required>
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            <h6 class="text-uppercase font-weight-bolder">Cuci badcover</h6>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class=" form-check">
+                                        <input class="form-check-input" type="radio" name="status_order" value="cuci_selimut" required>
+                                        <label class="form-check-label" for="exampleRadios3">
+                                            <h6 class="text-uppercase font-weight-bolder">Cuci selimut</h6>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class=" form-check">
+                                        <input class="form-check-input" type="radio" name="status_order" value="cuci_boneka" required>
+                                        <label class="form-check-label" for="exampleRadios3">
+                                            <h6 class="text-uppercase font-weight-bolder">Cuci boneka</h6>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </h5>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

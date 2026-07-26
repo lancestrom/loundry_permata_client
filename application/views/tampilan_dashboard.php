@@ -45,7 +45,7 @@
                 <h5 class="modal-title" id="exampleModalLabel">Tambah Trnsaksi</h5>
             </div>
             <div class="modal-body">
-                <form action="<?= site_url('dashboard/simpan_transaksi') ?>" method="post">
+                <form id="transaksi_form" action="<?= site_url('dashboard/simpan_transaksi') ?>" method="post">
                     <div class="form-group">
                         <label class="text-uppercase">Nama Customer</label>
                         <input type="text" name="nama_customer" class="form-control" required>
@@ -158,13 +158,46 @@
                                 <div class="col-md">
                                     <div class="form-group">
                                         <label class="text-uppercase">Nominal</label>
-                                        <input type="text" name="nominal" class="form-control">
+                                        <input type="text" name="nominal_display" id="nominal_input" class="form-control" oninput="formatRupiah(this)" autocomplete="off">
+                                        <input type="hidden" name="nominal" id="nominal_value">
                                     </div>
                                 </div>
                             </div>
                         </h5>
                     </div>
                     <script>
+                        function formatRupiah(input) {
+                            let raw = input.value.replace(/[^\d]/g, '');
+                            if (raw === '') {
+                                input.value = '';
+                                document.getElementById('nominal_value').value = '';
+                                return;
+                            }
+
+                            let number = parseInt(raw, 10);
+                            let formatted = new Intl.NumberFormat('id-ID', {
+                                style: 'currency',
+                                currency: 'IDR',
+                                maximumFractionDigits: 0
+                            }).format(number);
+
+                            input.value = formatted.replace('Rp', 'Rp ').trim();
+                            document.getElementById('nominal_value').value = number;
+                        }
+
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const form = document.getElementById('transaksi_form');
+                            if (form) {
+                                form.addEventListener('submit', function() {
+                                    const nominalInput = document.getElementById('nominal_input');
+                                    const nominalValue = document.getElementById('nominal_value');
+                                    if (nominalInput && nominalValue) {
+                                        nominalValue.value = nominalInput.value.replace(/[^\d]/g, '');
+                                    }
+                                });
+                            }
+                        });
+
                         function convertBeratToKg(input) {
                             let raw = (input.value || '').toString().trim().replace(/,/g, '.');
                             if (raw === '') {

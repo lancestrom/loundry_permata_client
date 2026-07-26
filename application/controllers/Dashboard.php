@@ -29,6 +29,7 @@ class Dashboard extends CI_Controller
             'durasi' => $durasi,
             'berat' => $berat,
             'nominal' => $nominal,
+            'status_transaksi' => 'Belum Lunas',
             'keterangan' => 'Transaksi baru',
             'timestamp' => date('Y-m-d H:i:s')
         );

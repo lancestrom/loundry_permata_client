@@ -7,8 +7,9 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
+        $isi['transaksi'] = $this->Model_transaksi->dataTransaksi();
         $this->load->view('templates/header');
-        $this->load->view('tampilan_dashboard');
+        $this->load->view('tampilan_dashboard', $isi);
         $this->load->view('templates/footer');
     }
 

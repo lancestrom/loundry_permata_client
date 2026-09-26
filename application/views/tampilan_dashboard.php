@@ -508,8 +508,8 @@
                                         <th scope="col">Nama Customer</th>
                                         <th scope="col">Status Order</th>
                                         <th scope="col">Durasi</th>
-                                        <th scope="col">Berat</th>
-                                        <th scope="col">Nominal</th>
+                                        <!-- <th scope="col">Berat</th>
+                                        <th scope="col">Nominal</th> -->
                                         <th scope="col">Status Transaksi</th>
                                         <th scope="col">Keterangan</th>
                                         <th scope="col">Tanggal</th>
@@ -524,8 +524,8 @@
                                                 <td class="text-center"><?= htmlspecialchars($row['nama_customer'], ENT_QUOTES, 'UTF-8') ?></td>
                                                 <td class="text-center"><?= htmlspecialchars($row['status_order'], ENT_QUOTES, 'UTF-8') ?></td>
                                                 <td class="text-center"><?= htmlspecialchars($row['durasi'], ENT_QUOTES, 'UTF-8') ?></td>
-                                                <td class="text-center"><?= htmlspecialchars($row['berat'], ENT_QUOTES, 'UTF-8') ?></td>
-                                                <td class="text-center">Rp <?= number_format((int) $row['nominal'], 0, ',', '.') ?></td>
+                                                <!-- <td class="text-center"><?= htmlspecialchars($row['berat'], ENT_QUOTES, 'UTF-8') ?></td>
+                                                <td class="text-center">Rp <?= number_format((int) $row['nominal'], 0, ',', '.') ?></td> -->
                                                 <td class="text-center"><?= htmlspecialchars($row['status_transaksi'], ENT_QUOTES, 'UTF-8') ?></td>
                                                 <td class="text-center"><?= htmlspecialchars($row['keterangan'], ENT_QUOTES, 'UTF-8') ?></td>
                                                 <td class="text-center"><?= htmlspecialchars($row['tanggal'], ENT_QUOTES, 'UTF-8') ?></td>
